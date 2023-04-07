@@ -38,5 +38,6 @@ float32 sensors_temperatures
 #psutil.sensors_battery()
 float32 sensors_battery
 
-
+#ROS node list
+string[] rosnode_list
 

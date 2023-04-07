@@ -37,6 +37,7 @@ class SystemNode():
         system_data.cpu_count = psutil.cpu_count()
         # print(psutil.cpu_count())
         system_data.cpu_percent = psutil.cpu_percent(percpu=False)
+        
         system_data.current_cpu_freq = psutil.cpu_freq(percpu=False).current
         # system_data.cpu_each_percent = psutil.cpu_percent(percpu=True)
         # system_data.current_each_cpu_freq = psutil.cpu_freq(percpu=True)
@@ -58,16 +59,19 @@ class SystemNode():
         
         if self.use_sensors_battery_state:
             system_data.sensors_battery = psutil.sensors_battery()
-        self.system_pub.publish(system_data)
         self.state()
+        system_data.rosnode_list = self.node_list
+        self.system_pub.publish(system_data)
+        
     
-    def get_rosnode_state(self,name,pid):
-        self.name = name
-        self.process = psutil.Process(pid=pid)
-        self.process_cpu_percent = self.process.cpu_percent()
+    def get_rosnode_state(self,node_name,node_pid):
+        self.name = node_name
+        self.process = psutil.Process(node_pid)
+        # self.process_cpu_percent = self.process.cpu_percent()
+        self.process_cpu_percent = self.process.cpu_percent(interval=0.1)
         self.process_mem_used = self.process.memory_info().rss
         self.process_mem_percent = self.process.memory_percent()
-        print("Name:",self.name,"CPU_percent:",self.process_cpu_percent,"MEM_percent:",self.process_mem_percent)
+        print("Name:",self.name,"Pid:",node_pid, "CPU_percent:",self.process_cpu_percent,"MEM_percent:",self.process_mem_percent,"MEM_used:",self.process_mem_used)
     
     def state(self):
         self.node_list = rosnode.get_node_names()
