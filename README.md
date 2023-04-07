@@ -7,26 +7,26 @@
 - system_monitor
   独自定義のメッセージファイルです．
   以下の情報が含まれています
-  - float64 time
-    システム測定時の時刻を示します．
-  - int8 cpu_count
-    システム内の論理コアを取得します
-  - float32 cpu_percent
-    CPUの使用率を取得します
-  - float32 current_cpu_freq
-    CPUの現在の動作周波数を取得します
-  - float32 memory_total
-    システム全体で使用可能なメモリを取得します
-  - float32 memory_percent
-    システムのメモリ使用率を取得します
-  - float32 disk_usage_percent
-    ディスク全体の使用率を取得します
-  - float32 sensors_temperatures
-    現在のCPU温度を取得します
-  - float32 sensors_battery
-    現在のバッテリー容量を取得します
-  - string[] rosnode_list
-    起動中のROSノードを取得します
+  - float64 time　　
+    システム測定時の時刻を示します　　
+  - int8 cpu_count　　
+    システム内の論理コアを取得します　　
+  - float32 cpu_percent　　
+    CPUの使用率を取得します　　
+  - float32 current_cpu_freq　　
+    CPUの現在の動作周波数を取得します　　
+  - float32 memory_total　　
+    システム全体で使用可能なメモリを取得します　　
+  - float32 memory_percent　　
+    システムのメモリ使用率を取得します　　
+  - float32 disk_usage_percent　　
+    ディスク全体の使用率を取得します　　
+  - float32 sensors_temperatures　　
+    現在のCPU温度を取得します　　
+  - float32 sensors_battery　　
+    現在のバッテリー容量を取得します　　
+  - string[] rosnode_list　　
+    起動中のROSノードを取得します　　
 
 
 # Dependencies
