@@ -31,7 +31,7 @@
 
 
 # Dependencies
-- ros nodetic  
+- ros2 foxy  
 - python3系及びそれに対応したバーションの[psutil](https://psutil.readthedocs.io/en/latest/#)
 
 # Install
@@ -44,5 +44,5 @@ git clone https://github.com/haruyama8940/system_monitor_ROS
 ```
 # Run
 ```
- roslaunch system_monitor_ROS system_monitor_ROS.launch 
+ ros2 launch system_monitor_ROS system_monitor_ROS.launch.py 
 ```
