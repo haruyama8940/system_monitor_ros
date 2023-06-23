@@ -1,4 +1,4 @@
-# system_monitor_ROS
+# system_monitor_ros
 このリポジトリは，システム状態の監視を目的としたROSノードです．  
 大まかに下記の情報が取得できます．
 1. システム全体のCPUやメモリの状態，温度
@@ -44,5 +44,5 @@ git clone https://github.com/haruyama8940/system_monitor_ROS
 ```
 # Run
 ```
- roslaunch system_monitor_ROS system_monitor_ROS.launch 
+ roslaunch system_monitor_ros system_monitor_ROS.launch 
 ```
