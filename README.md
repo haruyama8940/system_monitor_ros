@@ -38,7 +38,7 @@
 pip3 install psutil
 ```
 ```
-git clone https://github.com/haruyama8940/system_monitor_ros
+git clone https://github.com/haruyama8940/system_monitor_ros -b foxy-devel
 git clone https://github.com/haruyama8940/system_monitor_ros_msg
 
 ```
