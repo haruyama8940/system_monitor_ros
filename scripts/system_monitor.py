@@ -13,7 +13,7 @@ try:
 except ImportError:
     from xmlrpclib import ServerProxy
 
-from system_monitor_ROS.msg import system_monitor
+from system_monitor_ros.msg import system_monitor
 
 class SystemNode():
     def __init__(self):
