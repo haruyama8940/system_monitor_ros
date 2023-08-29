@@ -30,7 +30,7 @@
     ~~起動中のROSノードを取得します~~　　
 
 # Dependencies
-- ros2 foxy  
+- ros2  
 - python3系及びそれに対応したバーションの[psutil](https://psutil.readthedocs.io/en/latest/#)
 
 # Install
