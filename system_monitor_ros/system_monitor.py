@@ -17,8 +17,8 @@ class SystemNode(Node):
 
     def get_system_state(self):
         system_data = SystemMonitor()
-
-        system_data.time = self.get_clock().now().nanoseconds / 1e9
+        system_data.stamp = self.get_clock().now().to_msg()
+        # system_data.time = self.get_clock().now().nanoseconds / 1e9
         system_data.cpu_count = psutil.cpu_count()
         system_data.cpu_percent = psutil.cpu_percent(percpu=False)
         system_data.current_cpu_freq = psutil.cpu_freq(percpu=False).current
